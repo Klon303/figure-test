@@ -1,0 +1,290 @@
+
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+  .container {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    gap:50px;
+    align-items: center;
+  }
+
+  .block {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-width: 150px 150px 50px 150px;
+  border-style: solid;
+  border-color: #E95557 #E95557 transparent;
+  transform: rotate(180deg)
+
+  }
+.block:before{
+content:none;
+  }
+  .wrapper_text {
+    position: absolute;
+          top: -100px;
+        left: -100px;
+        transform: rotate(180deg);
+  }
+  .block:after{
+          content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -223px;
+        left: -150px;
+        border-left: 150px solid transparent;
+        border-right: 151px solid transparent;
+        border-bottom: 75px solid #E95557;
+}
+ .wrapper > .block:nth-child(1) {
+    border-color: blue blue transparent;
+     border-width: 150px 150px 0px 150px;
+}
+ .wrapper > .block:nth-child(1)::after {
+     border-bottom: 75px solid blue;
+}
+
+ .wrapper > .block:nth-child(2) {
+    border-color: red red transparent;
+}
+ .wrapper > .block:nth-child(2)::after {
+     border-bottom: 75px solid red;
+}
+
+ .wrapper > .block:nth-child(3) {
+    border-color: green green transparent;
+
+}
+ .wrapper > .block:nth-child(3)::after {
+     border-bottom: 75px solid green;
+}
+
+ .wrapper > .block:nth-child(4) {
+    border-color: yellow yellow transparent;
+
+}
+ .wrapper > .block:nth-child(4)::after {
+     border-bottom: 75px solid yellow;
+}
+
+
+ .wrapper > .block:nth-child(5) {
+    border-color: pink pink transparent;
+}
+ .wrapper > .block:nth-child(5)::after {
+     border-bottom: 75px solid pink;
+}
+
+ @media (min-width: 900px) {
+  .container {
+    width: 700px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 200px;
+  }
+  .block {
+        transform: rotate(90deg);
+         border-width: 150px 50px 50px 50px;
+  }
+  .block:after {
+    border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+         left: -50px;
+  }
+  .wrapper_text {
+    transform: rotate(270deg);
+  }
+  .wrapper > .block:nth-child(1) {
+    border-color: blue blue transparent;
+    border-width: 150px 50px 0px 50px;
+}
+
+  .wrapper > .block:nth-child(2) {
+
+}
+
+ .wrapper > .block:nth-child(2)::before {
+  content: "";
+display: inline-block;
+position: absolute;
+top: -298px;
+left:-49px;
+ width: 40px;
+  height: 50px;
+  border-radius: 200px 200px 0 0;
+  border-top: 100px solid red;
+  border-left: 100px solid red;
+  border-right: 100px solid red;
+}
+ .wrapper > .block:nth-child(2)::after {
+  content: "";
+	width: 0;
+	height: 0;
+  position: absolute;
+    top: -149px;
+    left: 90px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+  border-bottom:none;
+ }
+
+   .wrapper > .block:nth-child(3) {
+    transform: rotate(-90deg);
+     margin-right: 300px;
+      top: -100px;
+    left: 280px;
+}
+
+   .wrapper > .block:nth-child(4) {
+    transform: rotate(270deg);
+     margin-right: 300px;
+      top: -349px;
+    left:90px;
+       border-width: 50px 50px 50px 50px;
+}
+
+ .wrapper > .block:nth-child(4)::before {
+  content: "";
+display: inline-block;
+position: absolute;
+top: -200px;
+left:-190px;
+ width: 40px;
+  height: 50px;
+  border-radius: 200px 200px 0 0;
+  border-top: 100px solid yellow;
+  border-left: 100px solid yellow;
+  border-right: 100px solid yellow;
+
+}
+ .wrapper > .block:nth-child(4)::after {
+content: "";
+        position: absolute;
+        top: -50px;
+        left: -189px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid yellow;
+        border-bottom: none;
+ }
+
+
+ .wrapper > .block:nth-child(5)::before {
+  content: "";
+display: inline-block;
+position: absolute;
+top: -298px;
+left:-49px;
+ width: 40px;
+  height: 50px;
+  border-radius: 200px 200px 0 0;
+  border-top: 100px solid pink;
+  border-left: 100px solid pink;
+  border-right: 100px solid pink;
+
+}
+ .wrapper > .block:nth-child(5)::after {
+  content: "";
+	width: 0;
+	height: 0;
+  position: absolute;
+    top: -149px;
+    left: 90px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid pink;
+  border-bottom:none;
+ }
+
+   .wrapper > .block:nth-child(5) {
+      top: -210px;
+      left: -400px;
+}
+}
+
+ @media (min-width: 1600px) {
+ .container{
+  width: 1500px;
+ }
+ .wrapper{
+  gap:300px;
+ }
+  .wrapper > .block:nth-child(2)::before {
+  content: none;
+
+}
+ .wrapper > .block:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top:-174px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid red;
+        transform: rotate(180deg);
+ }
+ .wrapper > .block:nth-child(3) {
+    transform: rotate(-270deg);
+  margin-right: 0px;
+  top: 0px;
+  left: 0px;
+ }
+
+ .wrapper > .block:nth-child(3)::before {
+  content: "";
+display: inline-block;
+position: absolute;
+top: -298px;
+left:-50px;
+ width: 40px;
+  height: 50px;
+  border-radius: 200px 200px 0 0;
+  border-top: 100px solid green;
+  border-left: 100px solid green;
+  border-right: 100px solid green;
+}
+ .wrapper > .block:nth-child(3)::after {
+  content: "";
+	width: 0;
+	height: 0;
+  position: absolute;
+    top: -149px;
+    left: 90px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid green;
+  border-bottom:none;
+ }
+ .wrapper > .block:nth-child(4)::before {
+  content: none;
+
+}
+ .wrapper > .block:nth-child(4)::after {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top:-174px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid red;
+        transform: rotate(180deg);
+ }
+ .wrapper > .block:nth-child(4) {
+
+       border-width: 150px 50px 50px 50px;
+}
+ }
+
